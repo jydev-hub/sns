@@ -34,6 +34,19 @@ dependencies {
     annotationProcessor("org.projectlombok:lombok")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+
+    testCompileOnly ("org.projectlombok:lombok")
+    testAnnotationProcessor ("org.projectlombok:lombok")
+
+    //querydsl
+    implementation ("com.querydsl:querydsl-jpa:5.0.0:jakarta")
+    annotationProcessor ("com.querydsl:querydsl-apt:5.0.0:jakarta")
+    annotationProcessor ("jakarta.annotation:jakarta.annotation-api")
+    annotationProcessor ("jakarta.persistence:jakarta.persistence-api")
+
+    implementation ("nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect:3.1.0")
+
+    implementation ("org.modelmapper:modelmapper:3.1.0")
 }
 
 tasks.withType<Test> {
