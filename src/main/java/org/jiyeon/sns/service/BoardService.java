@@ -6,7 +6,7 @@ import org.jiyeon.sns.dto.PageResponseDTO;
 
 public interface BoardService {
 Long register(BoardDTO boardDTO);
-BoardDTO readOn(Long bno);
+BoardDTO readOne(Long bno);
 void modify(BoardDTO boardDTO);
 void remove(Long bno);
 PageResponseDTO<BoardDTO> list(PageRequestDTO pageRequestDTO);

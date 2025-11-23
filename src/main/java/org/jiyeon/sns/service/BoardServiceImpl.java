@@ -32,7 +32,7 @@ public class BoardServiceImpl implements BoardService {
         return bno;
     }
     @Override
-    public BoardDTO readOn(Long bno) {
+    public BoardDTO readOne(Long bno) {
         Optional<Board> result = boardRepository.findById(bno);
         Board board = result.orElseThrow();
         BoardDTO boardDTO = modelMapper.map(board, BoardDTO.class);
